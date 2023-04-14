@@ -16,6 +16,8 @@ function love.load()
     bump = require 'libraries.physics.bump'
     -- utilities --
     collision = require 'libraries.utilities.collision'
+    -- Basic 3D engine --
+    g3d = require 'libraries.3D.g3d'
 
     -- addons loader --
     Addons = love.filesystem.getDirectoryItems("libraries/addons")
