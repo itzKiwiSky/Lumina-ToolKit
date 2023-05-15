@@ -16,3 +16,4 @@ LuminaToolKit is a simple collection of libraries, folders, pre-built scripts an
 ### [Bump - Kikito](https://github.com/kikito/bump.lua)
 ### [Collision - V3X3D](https://gitlab.com/V3X3D/love-libs/-/tree/master/CollisionLib)
 ### [G3D - groverburguer](https://github.com/groverburger/g3d)
+### [LoveConsole - StrawberryChocolate (me :D)](https://github.com/Doge2Dev/LoveConsole)

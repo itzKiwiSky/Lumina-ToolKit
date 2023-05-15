@@ -3,6 +3,6 @@ function love.conf(w)
     w.window.height         =       720
     w.window.title          =       "new love game"
     w.console               =       true
-    w.identity              =       "default"
+    w.identity              =       "LuminaSDK_Default"
     w.window.resizable      =       false 
 end

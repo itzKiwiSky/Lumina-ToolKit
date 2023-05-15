@@ -1,4 +1,4 @@
-function love.graphics.newGradient(colors)
+function love.graphics.newGradient(filter, colors)
     local direction = colors.direction or "horizontal"
     if direction == "horizontal" then
         direction = true
@@ -18,7 +18,7 @@ function love.graphics.newGradient(colors)
         result:setPixel(x, y, color[1] / 255, color[2] / 255, color[3] / 255, color[4] / 255 or 255)
     end
     result = love.graphics.newImage(result)
-    result:setFilter('linear', 'linear')
+    result:setFilter(tostring(filter), tostring(filter))
     return result
 end
 

@@ -1,6 +1,6 @@
 function love.graphics.getQuads(filename)
-    local image = love.graphics.newImage("resources/images/" .. filename .. ".png")
-    local jsonData = love.filesystem.read("resources/images/" .. filename .. ".json")
+    local image = love.graphics.newImage(filename .. ".png")
+    local jsonData = love.filesystem.read(filename .. ".json")
     local sparrow = json.decode(jsonData)
 
     local Quads = {}

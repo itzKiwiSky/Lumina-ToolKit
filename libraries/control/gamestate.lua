@@ -55,7 +55,7 @@ end
 local all_callbacks = { 'draw', 'update' }
 
 -- fetch event callbacks from love.handlers
-for k in pairs(love.handlers) do
+for k in ipairs(love.handlers) do
 	all_callbacks[#all_callbacks+1] = k
 end
 
