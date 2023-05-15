@@ -21,7 +21,7 @@ function love.load(args)
     -- Basic 3D engine --
     g3d = require 'libraries.3D.g3d'
 
-    -- load new console commands --
+    -- Initialize a new console --
     console:new(90, 90)
 
     -- addons loader --
