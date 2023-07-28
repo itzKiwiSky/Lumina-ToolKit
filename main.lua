@@ -3,7 +3,7 @@ function love.load(args)
     gamestate = require 'libraries.control.gamestate'
     camera = require 'libraries.control.camera'
     timer = require 'libraries.control.timer'
-    console = require 'libraries.control.console'
+    loveconsole = require 'libraries.control.loveconsole'
     -- filesystem --
     json = require 'libraries.filesystem.json'
     nativefs = require 'libraries.filesystem.nativefs'
@@ -22,7 +22,7 @@ function love.load(args)
     g3d = require 'libraries.3D.g3d'
 
     -- Initialize a new console --
-    console:new(90, 90)
+    loveconsole:init()
 
     -- addons loader --
     Addons = love.filesystem.getDirectoryItems("libraries/addons")
@@ -51,16 +51,16 @@ end
 function love.draw()
     gamestate.current():draw()
     suit.draw()
-    console:render()
+    loveconsole:render()
 end
 
 function love.update(elapsed)
-    console:update()
+    loveconsole:update()
 end
 
 function love.textinput(text)
     suit.textinput(text)
-    console:textinput(text)
+    loveconsole:textinput(text)
 end
 
 function love.textedited(text)
@@ -69,24 +69,13 @@ end
 
 function love.keypressed(k)
     suit.keypressed(k)
-    console:keypressed(k)
+    loveconsole:keypressed(k)
 end
 
 function love.mousepressed(x, y, button)
-    console:mousepressed(x, y, button)
+    loveconsole:mousepressed(x, y, button)
 end
 
 function love.mousereleased(x, y, button)
-    console:mousereleased(x, y, button)
-end
-
-function love.errhand(error_message)
-    local tracebackError = debug.traceback(error_message or "")
-    local buttons = {"abort"}
-    local errorText = [[
-LuminaSDK found a error during the execution.
-
-%s
-    ]]
-    local pressedButton = love.window.showMessageBox("LuminaSDK Exception", string.format(errorText, tracebackError), buttons, "error")
+    loveconsole:mousereleased(x, y, button)
 end
