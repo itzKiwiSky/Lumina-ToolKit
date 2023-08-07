@@ -41,7 +41,7 @@ function love.load(args)
 
     -- every argument passed to the game will direct to console
     if #args > 0 then
-        console:run(table.concat(args, " "))
+        loveconsole:run(table.concat(args, " "))
     end
 
     gamestate.registerEvents({'update', 'textinput', 'keypressed', 'mousepressed', 'mousereleased'})
